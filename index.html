@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WeatherApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <section class="form-section">
+        <form class="form" id="form">
+          <select id="selectedOption">
+            <option value="" selected disabled hidden>Wybierz miasto</option>
+            <option value="kielce">Kielce</option>
+            <option value="krakow">Kraków</option>
+            <option value="lublin">Lublin</option>
+          </select>
+          <button id="searchButton">Wyszukaj</button>
+          <div id="error" class="error"></div>
+        </form>
+      </section>
+      <main class="main">
+        <section id="weather">
+          <div class="city" id="city"></div>
+          <div class="fullDate">
+            <div id="date"></div>
+            <div id="hour"></div>
+          </div>
+          <section class="additionalInfo">
+            <b><div id="temperature"></div></b>
+            <div id="totalPrecipitation"></div>
+            <div id="pressure"></div>
+          </section>
+        </section>
+        <section>
+          <div id="selectCityInfo">Wybierz miasto aby zobaczyć pogodę</div>
+          <div id="loading">Ładuję danę pogodowe!</div>
+        </section>
+      </main>
+    </div>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
